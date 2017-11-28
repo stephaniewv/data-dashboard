@@ -1,3 +1,122 @@
-/*
- * Estilos de tu proyecto
- */
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+  overflow: hidden;
+  overflow-y: auto;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.wrapper {
+
+}
+
+.main-header {
+  background-color: #ffc107;
+  position: relative;
+  max-height: 103px;
+  z-index: 1030;
+}
+
+.navbar {
+  position: relative;
+}
+
+.navbar-static-top {
+  z-index: 1000;
+}
+
+.navbar-right-menu{
+  float: right;
+}
+
+.input-group{
+
+}
+
+.nav-search{
+  display: inline-block;
+  position: absolute;
+  left: 34%;
+  top: 44px;
+}
+
+.form-control{
+width: 400px;
+}
+
+.nav-right{
+  display: inline-block;
+}
+
+.navbar-nav {
+  margin: 0;
+  padding: 0;
+}
+
+.login {
+  position: relative;
+  right: 30px;
+  top: 30px;
+}
+
+.mensaje {
+  position: relative;
+  right: 50px;
+  top: 20px;
+  font-size: 25px;
+}
+
+.mensaje a {
+  text-decoration: none;
+}
+
+.icon-envelope {
+  color: #fff;
+}
+
+/*Left side column*/
+
+.main-sidebar {
+  background-color: #2b2b2b;
+  position: absolute;
+  top: 0
+  left: 0;
+  padding-top: 50px;
+  min-height: 100%;
+  width: 230px;
+  z-index: 810;
+}
+
+.sidebar {
+  height: auto;
+  padding-bottom: 10px;
+}
+
+.text{
+  text-align: center;
+}
+
+.main-image img {
+  position: relative;
+    left: 35px;
+}
+
+.main-text h2{
+  color: white;
+}
+
+.main-text h3 ,span ,h4{
+  color: #ffc107;
+  position: relative;
+}
+
+.main-text span, h4 {
+  display: inline;
+  margin: 0;
+}
+
+.main-text span {
+  margin-right: 5px;
+}

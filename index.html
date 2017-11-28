@@ -3,8 +3,76 @@
   <head>
     <meta charset="utf-8">
     <title>Data Dashboard</title>
+    <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
+    <div class="wrapper">
+      <header class="main-header">
+        <!--Logo-->
+        <img src="assets/images/logo_laboratoria.png" alt="Logo">
+        <nav class="navbar navbar-static-top">
+          <a href="#" class="hamburger" data-toogle="push-menu" role="button">
+            <span></span>
+          </a>
+          <!--Search-->
+          <div>
+            <form action="#" method="get" class="sidebar-form">
+            <div class="input-group">
+              <input type="text" name="q" class="form-control" placeholder="Search...">
+              <span class="input-group-btn">
+              <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
+              </button>
+              </span>
+            </div>
+            </form>
+        </div>
+
+        <!--Navbar Right Menu-->
+        <div class='navbar-right-menu'>
+          <!--Falta colocar un search-->
+          <ul class="nav navbar-nav">
+            <li><a href=""></a></li>
+            <li><img src="assets/images/ale_foto.png" width="50" height="50"alt=""></li>
+          </ul>
+        </div>
+        </nav>
+      </header>
+                    <!--Left side column-->
+      <aside class="main-sidebar">
+        <section class="sidebar">
+          <div class="user-panel">
+            <div class="main-image">
+              <img src="assets/images/ale_foto.png" width="150" height="150" alt="">
+            </div>
+            <div>
+              <h2>Alejandra</h2>
+            </div>
+            <div>
+              <h3>Training Manager</h3>
+            </div>
+            <div>
+              <span>Lima</span>
+            </div>
+            </div>
+          </div>
+
+          <!--Sidebar (Barra Lateral) Menu-->
+          <ul class="sidebar-menu">
+            <li class="dasboard-sede">
+              <a href="#">
+                <i>
+                  <span>Dashboard</span>
+                </i>
+              </a>
+
+            </li>
+          </ul>
+
+        </section>
+      </aside>
+
+    </div>
+
 
 		<!-- Base de datos -->
 		<script src="./js/data.js"></script>

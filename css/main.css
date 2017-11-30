@@ -121,10 +121,9 @@ body {
 .main-sidebar {
     background-color: #2b2b2b;
     position: absolute;
-    /*top: 0;*/
     left: 0;
     padding-top: 50px;
-    min-height: 100%;
+    height: auto;
     width: 230px;
     z-index: 810;
 }
@@ -421,6 +420,8 @@ div .tab a {
     cursor: pointer;
     padding: 14px 16px;
     transition: 0.3s;
+    text-decoration: none;
+    color: #2b2b2b;
 }
 
 div.tab a:hover {
@@ -459,7 +460,6 @@ div .tab a:active {
     margin-right: 100px;
     margin-top: 30px;
     background-color: #F7F7F7;
-    width: 807px;
     height: auto;
 }
 

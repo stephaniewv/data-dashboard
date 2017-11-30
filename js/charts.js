@@ -1,25 +1,25 @@
 google.charts.load('current', {packages: ['corechart']});
 google.charts.load('current', {'packages': ['bar']});
 google.charts.load('current', {'packages':['table']});
+google.charts.setOnLoadCallback(drawTable);
 google.charts.setOnLoadCallback(drawChartTwo);
 google.charts.setOnLoadCallback(drawChartOne);
 google.charts.setOnLoadCallback(drawChartHse);
 google.charts.setOnLoadCallback(drawChartTech);
 google.charts.setOnLoadCallback(drawPorcentualStudents);
-google.charts.setOnLoadCallback(drawTable);
 
 
 /* Primer Gráfico de incriptas y desercion*/
 function drawChartOne() {
   var data = google.visualization.arrayToDataTable([
-    ['STUDENTS CURRENTLY ENROLLED', 'Students'],
-    ['In process', 11],
-    ['DROPOUT', 2],
+    ['STUDENTS CURRENTLY ENROLLED LIM 2017', 'Students'],
+    ['In process', 6],
+    ['DROPOUT', 8],
   ]);
 
   var options = {
     width: 400,
-    height: 240,
+    height: 200,
     title: 'Toppings I Like On My Pizza',
     colors: ['#2ecc71', '#ff4242', '#ec8f6e', '#f3b49f', '#f6c7b6'],
     title: 'ENROLLMENT',
@@ -32,15 +32,15 @@ function drawChartOne() {
 /* Grafico de Meta*/
 function drawChartTwo() {
   var dataMeetTheTarget = google.visualization.arrayToDataTable([
-    ['STUDENTS MEET THE TARGET', 'Students'],
-    ['Meet the target', 11],
-    ['Dont meet the target', 2],
+    ['Students meet the target', 'Students'],
+    ['Meet the target', 6]
+    ['Dont meet the target', 8],
   ]);
 
   var optionsMeetTheTarget = { 
     width: 400,
-    height: 240,
-    title: 'Toppings I Like On My Pizza',
+    height: 200,
+    title: 'Students meet the target',
     colors: ['#2ecc71', '#ff4242', '#ec8f6e', '#f3b49f', '#f6c7b6'],   
     title: 'TARGET',
     pieHole: 0.3,
@@ -59,6 +59,7 @@ function drawChartHse() {
 
   var optionsHse = {
     width: 400,
+    height: 200,
     chart: {
       title: 'HSE',
       subtitle: 'Porcentajes de alumnas que alcanzaron la meta, en proceso de hacerlo o por debajo de la meta',
@@ -79,7 +80,8 @@ function drawChartTech() {
   ]);
 
   var optionsTech = {
-    width: 600,
+    width: 400,
+    height: 200,
     chart: {
       title: 'TECH',
       subtitle: 'Porcentajes de alumnas que alcanzaron la meta, en proceso de hacerlo o por debajo de la meta',
@@ -105,7 +107,7 @@ function drawPorcentualStudents() {
 
   var optionsPorcentual = {
     width: 400,
-    height: 240,
+    height: 200,
     title: 'Toppings I Like On My Pizza',
     colors: ['#2ecc71', '#ff4242', '#ec8f6e', '#f3b49f', '#f6c7b6'],
     title: 'ENROLLMENT',
@@ -116,23 +118,18 @@ function drawPorcentualStudents() {
   chart.draw(dataPorcentual, optionsPorcentual);
 }
 
-/* puntuación promedio de los jedi masters*/ 
+  function drawTable() {
+    var data = new google.visualization.DataTable();
+    data.addColumn('string', 'Name');
+    data.addColumn('number', 'Salary');
+    data.addColumn('boolean', 'Full Time Employee');
+    data.addRows([
+      ['Mike',  {v: 10000, f: '$10,000'}, true],
+      ['Jim',   {v:8000,   f: '$8,000'},  false],
+      ['Alice', {v: 12500, f: '$12,500'}, true],
+      ['Bob',   {v: 7000,  f: '$7,000'},  true]
+    ]);
 
-function drawTable() {
-  var dataJM = new google.visualization.DataTable();
-  dataJM .addColumn('string', 'Name');
-  dataJM .addColumn('number', 'points');
-  dataJM .addRows([
-    ['Ale',  {v: 10000}],
-    ['Bea',   {v:8000 }],
-    ['Lulu', {v: 12500}],
-    ['Franco',   {v: 7000}],
-    ['Gabriela ',   {v: 7000}],
-    ['Mariana',   {v: 7000}],
+    var table = new google.visualization.Table(document.getElementById('jedi'))}
+
     
-  ]);
-
-  var table = new google.visualization.Table(document.getElementById('table_div'));
-
-  table.draw(dataJM, {showRowNumber: true, width: '100%', height: '100%'});
-}

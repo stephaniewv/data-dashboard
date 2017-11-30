@@ -1,42 +1,56 @@
 *{
   margin-top: 0px;
+  text-align: center;
 }
 
 .graphics{
-  text-align: center;
+  margin-left: 10px;
+    text-align: center;
 }
 .donutchart{
-  width: 600px; 
+  
+  border: 2px solid rgb(182, 182, 182);
+  width: 400px; 
   height: 200px;
   padding: 0px; 
-  margin: 0px
+  margin-top: 30px;
+  margin-left: 30%;
+  margin-bottom: 30px;
 }
 
-.donutchartTwo {
-    width: 600px; 
+.donutchartTwo, .one, .barchart_hse {
+    border: 2px solid rgb(182, 182, 182);
+    width: 400px; 
     height: 200px;
     padding: 0px; 
-    margin: 0px
+    margin-left: 30%;
+    margin-bottom: 30px;
 }
 
-.barchart_material {
-  width: 600px; 
+
+.barchart_tech {
+  border: 2px solid rgb(182, 182, 182);
+  width: 400px; 
   height: 200px;
   padding: 0px; 
-  margin: 0px
+  margin-left: 30%;
+  margin-bottom: 30px;
 }
 
-.tech-hse {
-  width: 600px; 
+.PorcentualStudents {
+  border: 2px solid rgb(182, 182, 182);
+  width: 400px; 
   height: 200px;
   padding: 0px; 
-  margin: 0px
+  margin-left: 30%;
+  margin-bottom: 30px;
 }
 
-.ocult {
-  display: none;
-}
-
-.content {
-  display: none;
+.jedis {
+  border: 2px solid rgb(182, 182, 182);
+  width: 400px; 
+  height: 200px;
+  padding: 0px; 
+  margin-left: 30%;
+  margin-bottom: 30px;
 }

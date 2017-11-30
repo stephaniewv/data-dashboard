@@ -8,6 +8,29 @@ body {
     margin: 0;
 }
 
+/* mostrar cargando */
+.loading {
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    margin: auto;
+    width: 150px;
+    height: 150px;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
 .main-header {
     background-color: #ffc107;
     position: relative;
@@ -382,6 +405,38 @@ hr {
 .dos {
     margin-left: 20px;
 }
+/*diseño subnav*/
+
+div .tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+div .tab a {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+}
+
+div.tab a:hover {
+    background-color: #ddd;
+}
+
+div .tab a:active {
+    background-color: #ccc;
+}
+
+.tab-content {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
 
 /*Contenedores de información Gráficos y alumnas*/
 
@@ -463,3 +518,6 @@ hr {
     padding: 0;
     margin: 0
 }
+
+
+

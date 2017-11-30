@@ -1,70 +1,204 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Datashboard-Students</title>
-  <script src="https://use.fontawesome.com/398f85d77e.js"></script>
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-  <link rel="stylesheet" href="css/students.css">
+    <meta charset="utf-8">
+    <title>Data Dashboard</title>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    <link rel="stylesheet" href="assets/icomoon/style.css">
+    <link rel="stylesheet" href="css/charts.css">
+    <link rel="stylesheet" href="css/main.css">
+
 </head>
-
 <body>
-  <div class="wrapper">
+<div class="wrapper">
     <header class="main-header">
-      <!--Logo-->
-      <button class="boton-menu"><span class="fa fa-bars" aria-hidden="true"></span></button>
-      <figure>
-          <img class="laboratoria-logo" src="assets/images/logo-laboratoria.svg" alt="Logo">
-      </figure>
+        <!--Logo-->
+        <img src="assets/images/logo_laboratoria.png" alt="Logo" width=230>
 
+        <!--Search-->
+        <div class="nav-search">
+            <form action="#" method="get" class="sidebar-form">
+                <div class="input-group">
+                    <input type="text" name="q" class="form-control" placeholder="Search...">
+                    <a class="input-group-btn">
+                <span class="icon-search2"></span>
+            </a>
+                </div>
+            </form>
+        </div>
+
+
+        <!--Navbar Right Menu-->
+        <div class='navbar-right-menu'>
+            <ul class="nav navbar-nav">
+                <li class="nav-right mensaje"><a href=""><span class="icon-envelope"></span></a></li>
+                <li class="nav-right login"><img src="assets/images/ale_foto.png" width="45" height="45" alt=""></li>
+            </ul>
+        </div>
+        <nav class="navbar navbar-static-top">
+            <a href="#" class="hamburger" data-toogle="push-menu" role="button">
+                <span></span>
+            </a>
+
+
+        </nav>
     </header>
-  </div>
-  <!--Filtro de estudiantes-->
-  <nav class="nav-students">  
-  <div class="init">
-    <h1>STUDENTS</h1>
-  </div>
-  <select name="select-sede" id="select-sede" class="select-sede">
-    <option value="">LIMA</option>
-    <option value="4chile">AREQUIPA</option>
-    <option value="5lima">SANTIAGO DE CHILE</option>
-    <option value="6lima">CIUDAD DE MÉXICO</option>
-  </select>
-  <select class="select-generation" name="select-generation" id="select-generation">
-    <option value="2016-1">2016 - I</option>
-    <option value="2016-2">2016 - II</option>
-    <option value="2017-1">2017 - I</option>
-    <option value="2017-2">2017 - II</option>
-  </select>
-</nav>
-<!--Especialización-->
-<nav>
-  <div class="specialization">
-      <h3><strong>SPECIALIZATION</strong></h3>
-      <span class="fa fa-square-o" aria-hidden="true"></span><h4>Javascript</h4></br>
-      <span class="fa fa-square-o" aria-hidden="true"></span><h4>UX Design</h4>
-      </br>
-      <span class="fa fa-square-o" aria-hidden="true"></span><h4>Front End & Designer</h4>
-  </div> 
-</nav>
-<!--Barra de búsqueda por nombre de alumna-->
-<nav>
-    <div class="sidebar-search">
-        <form action="#" method="get" class="sidebar-form">
-            <div class="input-group">
-            <input class="search "type="text" name="q" class="form-control" placeholder="Search...">
-            <span class="input-group-btn">
-            <button type="submit" name="search" id="search-btn" class="btn btn-flat"><span class="fa fa-search" aria-hidden="true"></span></button>
-        </form>
-    </div> 
-</nav>
-<!--Información de alumnas-->
-<div id="students" class="images-container">
+    <!--Left side column-->
+    <aside class="main-sidebar">
+        <section class="sidebar">
+            <div class="user-panel">
+                <div class="main-image">
+                    <img src="assets/images/ale_foto.png" width="150" height="150" alt="">
+                </div>
+                <div class="text">
+                    <div class="main-text">
+                        <h2>Alejandra</h2>
+                    </div>
+                    <div class="main-text">
+                        <h3>Training Manager</h3>
+                    </div>
+                    <div class="main-text">
+                        <span class="icon-map-marker"></span><h4 class="main-text">Lima</h4>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <!--Sidebar (Barra Lateral) Menu-->
+            <ul class="sidebar-menu">
+                <li class="headquarters-dashboard">
+                    <a href="#">
+                        <span class="icon-th-large"></span>
+                        <h4 class="tex-dash">Dashboard</h4>
+                        <span class="pull-container"></span>
+                    </a>
+                    <ul class="headquarters">
+                        <li class="headquarters-lima">
+                            <a href="#">
+                                <span class="icon-caret-right"></span>Lima
+                            </a>
+                        </li>
+                        <li class="headquarters-arequipa">
+                            <a href="#">
+                                <span class="icon-caret-right"></span>Arequipa
+                            </a>
+                        </li>
+                        <li class="headquarters-mexico">
+                            <a href="#">
+                                <span class="icon-caret-right"></span>Ciudad de México
+                            </a>
+                        </li>
+                        <li class="headquarters-santiago">
+                            <a href="#">
+                                <span class="icon-caret-right"></span>Santiago de Chile
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="comparativo">
+                    <a href="#">
+                        <span class="icon-edit"></span>
+                        <h4>Comparativo</h4>
+                    </a>
+                </li>
+                <li class="setting">
+                    <a href="#">
+                        <span class="icon-cog"></span>
+                        <h4>Dashboard</h4>
+                    </a>
+                </li>
+            </ul>
+
+        </section>
+    </aside>
+    <!--Contenido de la Página-->
+    <div class="content-wrapper">
+        <section class="content-header">
+            <div class="container-promo">
+            <span>Promoción</span>
+            </div>
+            <select id="promocion">
+                <option id="2017-2" class="combo">2017 - II</option>
+                <option id="2017-1" class="combo">2017 - I </option>
+                <option id="2016-2" class="combo">2016 - II</option>
+                <option id="2016-1" class="combo">2016 - I </option>
+                <option id="2015-2" class="combo">2015 - II</option>
+                <option id="2015-1" class="combo">2015 - I </option>
+            </select>
+            <div class="container-sprint">
+            <span>Sprint</span>
+            </div>
+            <select id="sprint">
+                <option id="sprint1" class="combo">1</option>
+                <option id="sprint2" class="combo">2</option>
+                <option id="sprint2" class="combo">3</option>
+                <option id="sprint2" class="combo">4</option>
+            </select>
+        </section>
+        <!--Cajas-->
+        <div class="container-box">
+            <div class="box-total">
+                <h3>141</h3>
+                <p>Total Alumnas</p>
+            </div>
+            <div class="box-desertaron">
+                <h3>15</h3>
+                <p>Deserción</p>
+            </div>
+            <div class="box-proceso">
+                <h3>126</h3>
+                <p>En Proceso</p>
+            </div>
+            <!--Derecha-->
+            <div class="box-puntaje">
+                <h3>80%</h3>
+                <p>Puntaje Promedio</p>
+            </div>
+            <div class="box-media">
+                <h3>108</h3>
+                <p>Media alcanzada</p>
+            </div>
+            <div class="box-nomedia">
+                <h3>18</h3>
+                <p>Media no alcanzada</p>
+            </div>
+        </div>
+        <!--Main Content-->
+
+          <!-- Sub-menu -->
+        <nav class="reponav">
+            <span class="reponav-item.selected">
+              <a id="graphics" class="text-nav" href="#"><span>Gráfico</span></a>
+            </span>
+            <span class="reponav-item.selected">
+              <a id="students-option" class="text-nav dos"href="#"><span>Alumnas</span></a>
+            </span>
+          </nav>
+
+      <!-- Graficos -->
+        <div id="graphics-cuerpo"class="graphics">
+            <div id="donutchart" class="donutchart"></div>
+            
+            <div id="donutchartTwo" class="donutchartTwo"></div>
+            
+            <div id="tech-hse" class="tech-hse"></div>
+            
+            <div id="barchart_hse" class="barchart_hse"></div>
+            
+            <div id="barchart_tech" class="barchart_tech"></div>
+
+            <div id="PorcentualStudents" class="PorcentualStudents"></div>
+
+            <div id="jedis" class="jedis"></div>
+
+        </div>
+
+        <!-- Alumnas -->
+        <section id="content"class="content">
+        <div class="alumnas">
+          <div id="students" class="images-container">
   <img class="img-student" src="https://dummyimage.com/162x148.png/ff4444/ffffff" alt="Donna Sloper">
-  
+
   <div class="basic-information">
       <h3 class="student-name">Donna Sloper</h3>
       <h5 class="subtittle">Frontend Developer</h5>
@@ -74,8 +208,8 @@
         <div class="know"><h6>JQUERY</h6></div>
       </div>
   </div>
-  
- 
+
+
   <div class="skills">
       <div class="skills-container">
         <h4>96.3%</h4>
@@ -91,8 +225,25 @@
       </div>
   </div>
   </div>
+        </div>
+        </section>
 
-  <script type="text/javascript" src="js/students.js"></script>
+        <!--Graficos-->
+        <!-- <div class="graphic">
+            <section>
+                <div id="donucharts"></div>
+            </section>
+        </div> -->
+    </div>
+</div>
+<!-- Base de datos -->
+<script type="text/javascript" src="js/data.js"></script>
+<!-- Aquí va tus archivos JS -->
+<script type="text/javascript" src="js/app.js"></script>
+<!--libreria-->
+<script type = "text/javascript" src = "https://www.google.com/jsapi" ></script>
+<!--Google Charts-->
+<script type="text/javascript" src="js/charts.js"></script>
+<script type="text/javascript" src="js/students.js"></script>
 </body>
-
 </html>

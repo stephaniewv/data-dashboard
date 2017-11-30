@@ -1,11 +1,12 @@
 google.charts.load('current', {packages: ['corechart']});
 google.charts.load('current', {'packages': ['bar']});
+google.charts.load('current', {'packages':['table']});
 google.charts.setOnLoadCallback(drawChartTwo);
 google.charts.setOnLoadCallback(drawChartOne);
 google.charts.setOnLoadCallback(drawChartHse);
 google.charts.setOnLoadCallback(drawChartTech);
 google.charts.setOnLoadCallback(drawPorcentualStudents);
-google.charts.setOnLoadCallback(drawJediMasters);
+google.charts.setOnLoadCallback(drawTable);
 
 
 /* Primer Gráfico de incriptas y desercion*/
@@ -117,28 +118,21 @@ function drawPorcentualStudents() {
 
 /* puntuación promedio de los jedi masters*/ 
 
-function drawJediMasters() {
-  var dataJM = google.visualization.arrayToDataTable([
-    ['Excellent', 'Greet']
-    ['Bea', 11],
-    ['Ale', 2],
-    ['Michelle', 2],
-    ['Bea', 2],
-    ['Lulu', 2],
-    ['Franco', 2],
-    ['Gabriela', 2],
-    ['Mariana', 2],
-
+function drawTable() {
+  var dataJM = new google.visualization.DataTable();
+  dataJM .addColumn('string', 'Name');
+  dataJM .addColumn('number', 'points');
+  dataJM .addRows([
+    ['Ale',  {v: 10000}],
+    ['Bea',   {v:8000 }],
+    ['Lulu', {v: 12500}],
+    ['Franco',   {v: 7000}],
+    ['Gabriela ',   {v: 7000}],
+    ['Mariana',   {v: 7000}],
+    
   ]);
 
-  var optionsJM = {
-    width: 400,
-    height: 240,
-    colors: ['#2ecc71', '#ff4242', '#ec8f6e', '#f3b49f', '#f6c7b6'],
-    title: 'Puntuación Promedio de los Jedi Masters',
-    pieHole: 0.3,
-  };
+  var table = new google.visualization.Table(document.getElementById('table_div'));
 
-  var chart = new google.visualization.PieChart(document.getElementById('jedis'));
-  chart.draw(dataJM, optionsJM);
+  table.draw(dataJM, {showRowNumber: true, width: '100%', height: '100%'});
 }

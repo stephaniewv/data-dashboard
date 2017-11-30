@@ -8,26 +8,19 @@ console.log(selectStudents);
 console.log(bodyGraphics);
 console.log(bodyStudents);
 
-/*selectStudents.addEventListener('click', function showStudents(event) {
-    
-    if(selectGraphics===true) {/*Oculto los graficos*
-    
-    bodyGraphics.classList.add('ocult');
-  
-    bodyStudents.classList.add('see') }
-   
-    else if (selectStudents===true){
-    
-    bodyStudents.classList.add('ocult');
 
-    bodyGraphics.classList.add('see');
-   }
+selectStudents.addEventListener("load",function(event){
+  bodyStudents
+})
+selectStudents.addEventListener('click', function (event) {
+    
+    bodyGraphics.classList.toggle('ocult');
+  
+    bodyStudents.classList.toggle('see');
 });
 
-selectGraphics.addEventListener('click', function showStudents(event) {
-    /*Oculto los graficos 
+selectGraphics.addEventListener('click', function (event) {
   bodyStudents.classList.add('ocult');
-    /*muestro a las estudiantes
   bodyGraphics.classList.add('see');
 });
 

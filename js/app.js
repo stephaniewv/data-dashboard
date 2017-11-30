@@ -1,68 +1,7 @@
-var jsonObj;
-var selectSeat;
-
-function get(url) {
-    return new Promise(function (resolve, reject) {
-        var req = new XMLHttpRequest();
-        req.open('GET', url);
-
-        req.onload = function () {
-            if (req.status == 200) {
-                resolve(req.response);
-            }
-            else {
-                reject(Error(req.statusText));
-            }
-        };
-
-        req.onerror = function () {
-            reject(Error("Network Error"));
-        };
-
-        req.send();
-    });
-}
-
-function getJSON(url) {
-    return get(url).then(JSON.parse);
-}
-
-getJSON('js/data.json').then(function (data) {
-    console.log(data);
-    jsonObj = data;
-    var contentDiv = document.getElementsByClassName("wrapper")[0];
-    var loader = document.getElementById("loader");
-    loader.classList.remove("loading");
-    contentDiv.style.display = "block";
-}).then(function() {
-    getPromotionBySeat("LIM");
-});
-
-function getPromotionBySeat(seat) {
-    console.log(seat);
-    console.log(jsonObj);
-    selectSeat = seat;
-    var select = document.getElementById("promocion");
-    for (var i = select.options.length - 1; i > 0 ;i--) {
-        select.remove(i);
-    }
-
-    var promotions = Object.keys(jsonObj[seat]);
-    for (var p in promotions) {
-        var opt = document.createElement("option");
-        opt.innerText = promotions[p];
-        opt.id = p;
-        select.appendChild(opt);
-    }
-
-    var optDefault = document.createElement("option");
-    optDefault.selected;
-    optDefault.id = "";
-    optDefault.a
-}
-
-
 document.addEventListener("DOMContentLoaded", function(event) {
+    var jsonObj = data;
+    var selectSeat;
+
     var lima = document.getElementById("lima");
     var arequipa = document.getElementById("arequipa");
     var mexico = document.getElementById("mexico");
@@ -139,6 +78,29 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
         document.getElementById(tabName).style.display = "block";
         evt.className += " active";
+    }
+
+    function getPromotionBySeat(seat) {
+        console.log(seat);
+        console.log(jsonObj);
+        selectSeat = seat;
+        var select = document.getElementById("promocion");
+        for (var i = select.options.length - 1; i > 0 ;i--) {
+            select.remove(i);
+        }
+
+        var promotions = Object.keys(jsonObj[seat]);
+        for (var p in promotions) {
+            var opt = document.createElement("option");
+            opt.innerText = promotions[p];
+            opt.id = p;
+            select.appendChild(opt);
+        }
+
+        var optDefault = document.createElement("option");
+        optDefault.selected;
+        optDefault.id = "";
+        optDefault.a
     }
 
 });

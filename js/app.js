@@ -1,32 +1,144 @@
-/*
- * Funcionalidad de tu producto
- */
+var jsonObj;
+var selectSeat;
 
-// Puedes hacer uso de la base de datos a través de la variable `data`
-/*console.log(data);*/
+function get(url) {
+    return new Promise(function (resolve, reject) {
+        var req = new XMLHttpRequest();
+        req.open('GET', url);
 
+        req.onload = function () {
+            if (req.status == 200) {
+                resolve(req.response);
+            }
+            else {
+                reject(Error(req.statusText));
+            }
+        };
 
-google.load("current", {packages:["corechart"]});
-google.setOnLoadCallback(drawChart);
-function drawChart() {
-    var data = google.visualization.arrayToDataTable([
-        ['Task', 'Hours per Day'],
-        ['Work',     11],
-        ['Eat',      2],
-        ['Commute',  2],
-        ['Watch TV', 2],
-        ['Sleep',    7]
-    ]);
+        req.onerror = function () {
+            reject(Error("Network Error"));
+        };
 
-    var options = {
-        title: 'My Daily Activities',
-        pieHole: 0.4,
-    };
-
-    var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
-    chart.draw(data, options);
+        req.send();
+    });
 }
-=======
-window.addEventListener("DOMContentLoaded", function() {
-   
+
+function getJSON(url) {
+    return get(url).then(JSON.parse);
+}
+
+getJSON('js/data.json').then(function (data) {
+    console.log(data);
+    jsonObj = data;
+    var contentDiv = document.getElementsByClassName("wrapper")[0];
+    var loader = document.getElementById("loader");
+    loader.classList.remove("loading");
+    contentDiv.style.display = "block";
+}).then(function() {
+    getPromotionBySeat("LIM");
+});
+
+function getPromotionBySeat(seat) {
+    console.log(seat);
+    console.log(jsonObj);
+    selectSeat = seat;
+    var select = document.getElementById("promocion");
+    for (var i = select.options.length - 1; i > 0 ;i--) {
+        select.remove(i);
+    }
+
+    var promotions = Object.keys(jsonObj[seat]);
+    for (var p in promotions) {
+        var opt = document.createElement("option");
+        opt.innerText = promotions[p];
+        opt.id = p;
+        select.appendChild(opt);
+    }
+
+    var optDefault = document.createElement("option");
+    optDefault.selected;
+    optDefault.id = "";
+    optDefault.a
+}
+
+
+document.addEventListener("DOMContentLoaded", function(event) {
+    var lima = document.getElementById("lima");
+    var arequipa = document.getElementById("arequipa");
+    var mexico = document.getElementById("mexico");
+    var chile = document.getElementById("santiago");
+
+    var select = document.getElementById("promocion");
+
+    var tabs = document.getElementsByClassName("tab-links");
+
+    select.addEventListener('change', function () {
+       getStudents(selectSeat, this.options[this.selectedIndex].value);
+    });
+
+    lima.addEventListener('click', function () {
+        getPromotionBySeat("LIM");
+    });
+
+    arequipa.addEventListener('click', function () {
+        getPromotionBySeat("AQP");
+    });
+
+    mexico.addEventListener('click', function () {
+        getPromotionBySeat("CDMX");
+    });
+
+    chile.addEventListener('click', function () {
+        getPromotionBySeat("SCL");
+    });
+    
+    for (var i = 0; i < tabs.length; i++) {
+        tabs[i].addEventListener('click', function () {
+            console.log(this);
+            console.log(this.innerText);
+            showTab(this, this.innerText);
+        })
+    }
+
+    function getStudents(seat, promotion) {
+        var students = jsonObj[seat][promotion]["students"];
+        var ratings = jsonObj[seat][promotion]["ratings"];
+        var divContent = document.getElementById("student-content");
+        var divToClone = document.getElementById("students");
+
+        for ( var i = divContent.childNodes.length - 1; i > 0; i-- ) {
+            divContent.removeChild(divContent.childNodes[i]);
+        }
+
+        for (var j = 0; j < students.length; j++) {
+            var student = students[j];
+            var clone = divToClone.cloneNode(true);
+            clone.getElementsByClassName("student-name")[0].innerText = student["name"];
+            var photo = clone.getElementsByClassName("img-student")[0];
+            photo.src = student["photo"];
+            photo.alt = student["name"];
+            clone.style.display = "block";
+            divContent.appendChild(clone);
+            console.log(clone);
+        }
+    }
+
+    function showTab(evt, tabName) {
+        tabName = tabName.toLowerCase();
+        console.log(tabName);
+
+        var tabContent = document.getElementsByClassName("tab-content");
+        for (var i = 0; i < tabContent.length; i++) {
+            tabContent[i].style.display = "none";
+        }
+
+        var tabLinks = document.getElementsByClassName("tab-links");
+        for (i = 0; i < tabLinks.length; i++) {
+            tabLinks[i].className = tabLinks[i].className.replace(" active", "");
+        }
+
+        document.getElementById(tabName).style.display = "block";
+        evt.className += " active";
+    }
+
 });

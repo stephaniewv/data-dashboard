@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Datashboard-Students</title>
+  <script src="https://use.fontawesome.com/398f85d77e.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="css/students.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="main-header">
+      <!--Logo-->
+      <button class="boton-menu"><span class="fa fa-bars" aria-hidden="true"></span></button>
+      <figure>
+          <img class="laboratoria-logo" src="assets/images/logo-laboratoria.svg" alt="Logo">
+      </figure>
+
+    </header>
+  </div>
+  <!--Filtro de estudiantes-->
+  <nav class="nav-students">  
+  <div class="init">
+    <h1>STUDENTS</h1>
+  </div>
+  <select name="select-sede" id="select-sede" class="select-sede">
+    <option value="">LIMA</option>
+    <option value="4chile">AREQUIPA</option>
+    <option value="5lima">SANTIAGO DE CHILE</option>
+    <option value="6lima">CIUDAD DE MÉXICO</option>
+  </select>
+  <select class="select-generation" name="select-generation" id="select-generation">
+    <option value="2016-1">2016 - I</option>
+    <option value="2016-2">2016 - II</option>
+    <option value="2017-1">2017 - I</option>
+    <option value="2017-2">2017 - II</option>
+  </select>
+</nav>
+<!--Especialización-->
+<nav>
+  <div class="specialization">
+      <h3><strong>SPECIALIZATION</strong></h3>
+      <span class="fa fa-square-o" aria-hidden="true"></span><h4>Javascript</h4></br>
+      <span class="fa fa-square-o" aria-hidden="true"></span><h4>UX Design</h4>
+      </br>
+      <span class="fa fa-square-o" aria-hidden="true"></span><h4>Front End & Designer</h4>
+  </div> 
+</nav>
+<!--Barra de búsqueda por nombre de alumna-->
+<nav>
+    <div class="sidebar-search">
+        <form action="#" method="get" class="sidebar-form">
+            <div class="input-group">
+            <input class="search "type="text" name="q" class="form-control" placeholder="Search...">
+            <span class="input-group-btn">
+            <button type="submit" name="search" id="search-btn" class="btn btn-flat"><span class="fa fa-search" aria-hidden="true"></span></button>
+        </form>
+    </div> 
+</nav>
+<!--Información de alumnas-->
+<div id="students" class="images-container">
+  <img class="img-student" src="https://dummyimage.com/162x148.png/ff4444/ffffff" alt="Donna Sloper">
+  
+  <div class="basic-information">
+      <h3 class="student-name">Donna Sloper</h3>
+      <h5 class="subtittle">Frontend Developer</h5>
+      <div class="knowledge">
+        <div class="know"><h6>JavaScript</h6></div>
+        <div class="know"><h6>APIs</h6></div>
+        <div class="know"><h6>JQUERY</h6></div>
+      </div>
+  </div>
+  
+ 
+  <div class="skills">
+      <div class="skills-container">
+        <h4>96.3%</h4>
+        <h6>TECH SKILLS</h6>
+      </div>
+      <div class="skills-container">
+        <h4>96.3%</h4>
+        <h6>LIFE SKILLS</h6>
+      </div>
+      <div class="skills-container">
+        <h4>96.3%</h4>
+        <h6>ENGLISH SKILLS</h6>
+      </div>
+  </div>
+  </div>
+
+  <script type="text/javascript" src="js/students.js"></script>
+</body>
+
+</html>

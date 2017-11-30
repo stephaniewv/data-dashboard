@@ -1,47 +1,43 @@
 body {
-  font-family: 'Source Sans Pro', sans-serif;
-  font-weight: 400;
-  overflow: hidden;
-  overflow-y: auto;
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-.wrapper {
-
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    overflow: hidden;
+    overflow-y: auto;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
 .main-header {
-  background-color: #ffc107;
-  position: relative;
-  max-height: 103px;
-  z-index: 1030;
+    background-color: #ffc107;
+    position: relative;
+    max-height: 103px;
+    z-index: 1030;
 }
 
 .navbar {
-  position: relative;
+    position: relative;
 }
 
 .navbar-static-top {
-  z-index: 1000;
+    z-index: 1000;
 }
 
-.navbar-right-menu{
-  float: right;
+.navbar-right-menu {
+    float: right;
 }
 
-.input-group{
+.input-group {
 
 }
 
-.nav-search{
-  position: absolute;
-  left: 34%;
-  top: 44px;
+.nav-search {
+    position: absolute;
+    left: 34%;
+    top: 44px;
 }
 
-.form-control{
+.form-control {
     width: 400px;
     border-radius: 21px;
     border: 1px solid #e6ecf0;
@@ -67,82 +63,82 @@ body {
     color: #14171a;
 }
 
-.nav-right{
-  display: inline-block;
+.nav-right {
+    display: inline-block;
 }
 
 .navbar-nav {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 .login {
-  position: relative;
-  right: 30px;
-  top: 30px;
+    position: relative;
+    right: 30px;
+    top: 30px;
 }
 
 .mensaje {
-  position: relative;
-  right: 50px;
-  top: 20px;
-  font-size: 25px;
+    position: relative;
+    right: 50px;
+    top: 20px;
+    font-size: 25px;
 }
 
 .mensaje a {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 .icon-envelope {
-  color: #fff;
+    color: #fff;
 }
 
 /*Left side column*/
 
 .main-sidebar {
-  background-color: #2b2b2b;
-  position: absolute;
-  /*top: 0;*/
-  left: 0;
-  padding-top: 50px;
-  min-height: 100%;
-  width: 230px;
-  z-index: 810;
+    background-color: #2b2b2b;
+    position: absolute;
+    /*top: 0;*/
+    left: 0;
+    padding-top: 50px;
+    min-height: 100%;
+    width: 230px;
+    z-index: 810;
 }
 
 .sidebar {
-  height: auto;
-  padding-bottom: 10px;
+    height: auto;
+    padding-bottom: 10px;
 }
 
-.text{
-  text-align: center;
+.text {
+    text-align: center;
 }
 
 .main-image img {
-  position: relative;
+    position: relative;
     left: 35px;
 }
 
-.main-text h2{
-  color: white;
+.main-text h2 {
+    color: white;
 }
 
-.main-text h3, span, h4{
-  color: #ffc107;
-  position: relative;
+.main-text h3, span, h4 {
+    color: #ffc107;
+    position: relative;
 }
 
 .main-text span, h4 {
-  display: inline;
-  margin: 0;
+    display: inline;
+    margin: 0;
 }
 
 .main-text span {
-  margin-right: 5px;
+    margin-right: 5px;
 }
 
-hr{
+hr {
     margin-top: 30px;
     width: 100%;
     color: #b8c7ce;
@@ -151,25 +147,25 @@ hr{
 
 /*Selecciones*/
 
-.sidebar-menu{
+.sidebar-menu {
     list-style: none;
     line-height: 30px;
 }
 
-.headquarters{
-   padding-left: 15px;
+.headquarters {
+    padding-left: 15px;
 }
 
 .headquarters-dashboard span {
     margin-right: 10px;
 }
 
-.headquarters{
+.headquarters {
     list-style: none;
 
 }
 
-.headquarters-dashboard a{
+.headquarters-dashboard a {
     text-decoration: none;
 
 }
@@ -179,9 +175,10 @@ hr{
 
 }
 
-.headquarters a{
+.headquarters a {
     text-decoration: none;
 }
+
 .comparativo a {
     text-decoration: none;
 }
@@ -190,11 +187,11 @@ hr{
     margin-right: 10px;
 }
 
-.setting span{
+.setting span {
     margin-right: 10px;
 }
 
-.setting a{
+.setting a {
     text-decoration: none;
 }
 
@@ -206,6 +203,7 @@ hr{
 .content-header {
     margin: 10px 0 5px 0;
 }
+
 /*Promociones hiddem*/
 
 .container-promo {
@@ -228,13 +226,13 @@ hr{
 
 /*Cajas*/
 
-.container-box{
+.container-box {
     margin-right: -10px;
 }
 
 .box-total {
     margin: 10px 0 10px 20px;
-    background-color: #00c0ef ;
+    background-color: #00c0ef;
     padding: 10px;
     color: white;
     border-radius: 2px;
@@ -246,8 +244,7 @@ hr{
     text-align: center;
 }
 
-
-.box-total h3{
+.box-total h3 {
     font-size: 38px;
     font-weight: bold;
     margin: 0 0 10px 0;
@@ -292,7 +289,7 @@ hr{
     text-align: center;
 }
 
-.box-proceso h3{
+.box-proceso h3 {
     font-size: 38px;
     font-weight: bold;
     margin: 0 0 10px 0;
@@ -303,9 +300,8 @@ hr{
 
 /*Derecha*/
 
-
 .box-puntaje {
-    margin: 10px 0 10px 200px;
+    margin: 10px 0 10px 150px;
     background-color: #00a65a;
     padding: 10px;
     color: white;
@@ -314,11 +310,11 @@ hr{
     display: inline-block;
     margin-bottom: 20px;
     box-sizing: border-box;
-    width: 12%;
+    width: 14%;
     text-align: center;
 }
 
-.box-puntaje h3{
+.box-puntaje h3 {
     font-size: 38px;
     font-weight: bold;
     margin: 0 0 10px 0;
@@ -341,7 +337,7 @@ hr{
     text-align: center;
 }
 
-.box-media h3{
+.box-media h3 {
     font-size: 38px;
     font-weight: bold;
     margin: 0 0 10px 0;
@@ -360,18 +356,110 @@ hr{
     display: inline-block;
     margin-bottom: 20px;
     box-sizing: border-box;
-    width: 12%;
+    width: 14%;
     text-align: center;
 }
 
-.box-nomedia h3{
+.box-nomedia h3 {
     font-size: 38px;
     font-weight: bold;
     margin: 0 0 10px 0;
     white-space: nowrap;
     padding: 0;
-
 }
 
+/*Subnav*/
 
+.reponav {
+    margin-left: 20px;
+    font-size: 23px;
+}
 
+.text-nav {
+    text-decoration: none;
+}
+
+.dos {
+    margin-left: 20px;
+}
+
+/*Contenedores de información Gráficos y alumnas*/
+
+.graphics {
+    margin-right: -15px;
+    margin-left: -15px;
+    width: 100%;
+}
+
+.alumnas {
+    margin-right: -15px;
+    margin-left: -15px;
+    width: 100%;
+}
+
+/*CSS ALUMNAS */
+
+.images-container {
+    float: right;
+    margin-right: 100px;
+    margin-top: 30px;
+    background-color: #F7F7F7;
+    width: 807px;
+    height: auto;
+}
+
+.img-student {
+    margin: 5%;
+    float: left;
+}
+
+.basic-information {
+    margin: 2%;
+    float: left;
+}
+
+.student-name {
+    margin-bottom: 25px;
+}
+
+.know {
+    margin-right: 20px;
+    position: relative;
+    top: 27px;
+    background-color: #dcdcdc;
+    width: 100px;
+    height: 30px;
+    float: left;
+}
+
+.know h6 {
+    padding: 0;
+    margin: 8px;
+    text-align: center;
+}
+
+.skills {
+    position: relative;
+    bottom: 160px;
+    left: 250px;
+    margin-top: 30px;
+    margin-right: 10px;
+    float: left;
+    width: 260px;
+}
+
+.skills-container {
+    float: left;
+    position: relative;
+    width: 60px;
+    padding: 5px;
+    background-color: #dcdcdc;
+    margin-left: 15px;
+    height: 50px;
+    text-align: center;
+}
+
+.skills-container h6 {
+    padding: 0;
+    margin: 0
+}
